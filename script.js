@@ -1,5 +1,7 @@
-gsap.registerPlugin(ScrollTrigger)
+window.onload = function(){
+   gsap.registerPlugin(ScrollTrigger)
 gsap.registerPlugin(MotionPathPlugin);
+
 
 // plug-ins added ^
 
@@ -10,7 +12,7 @@ gsap.registerPlugin(MotionPathPlugin);
 let date =  new Date()
 let ora  = date.getHours()
 
-let moonPage = document.querySelector('.third-page')
+let moonPage = document.querySelector('.night-page')
 let sunPage = document.querySelector('.sun-page')
 
 if(ora < 18 && ora > 5){
@@ -40,17 +42,11 @@ let tl = gsap.timeline({
 })
 
 
-tl.to(".square", {scale: 1, x: 130, y: 1, rotate: 90}) // green square rotate on scroll  
-
-
-
-
-
 // gsap.set(".moon", {scale: 1.5, autoAlpha: 1}); => //scalling up moon
 // moon page
 let tl3 = gsap.to(".moon",{
     scrollTrigger: {
-        trigger: ".third-page",
+        trigger: ".night-page",
         start: "0 0",
         end: "bottom 100",
         // markers: true,
@@ -71,8 +67,8 @@ let tlSun = gsap.to(".sun", {
     scrollTrigger: {
         trigger: ".sun-page",
         start: "0 0",
-        end: "bottom 100",
-        pin: true,
+        end: "3000 100",
+        // pin: true,
         // markers: true,   
         scrub: 1
     },
@@ -85,51 +81,45 @@ let lorem1 = gsap.to(".graphics", {
     scrollTrigger: {
         trigger: ".sun-page",
         start: "0 0",
-        end: "bottom 100",
-        pin: true,
-        // markers: true,
-        scrub: 1,
-       
+        end: "300 0",        
+        // markers: true,   
+        scrub: 1,       
     },
-    "clip-path": "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"
-   
+    "clip-path": "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"    
 })
 
 let lorem2 = gsap.to(".web-design", {
     scrollTrigger: {
         trigger: ".sun-page",
-        start: "0 0",
-        end: "bottom 100",
-        pin: true,
-        // markers: true,
-        scrub: 1,
-       
+        start: "150 150",
+        end: "750 0",
+        // pin: true,
+        //markers: true,
+        scrub: 1,       
     },
-    "clip-path": "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"
-   
+    "clip-path": "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"   
 })
 
 let lorem3 = gsap.to(".frontend", {
     scrollTrigger: {
         trigger: ".sun-page",
         start: "0 0",
-        end: "bottom 100",
+        end: "2200 0",
         pin: true,
         // markers: true,
         scrub: 1,
        
     },
-    "clip-path": "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"
-   
+    "clip-path": "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)" 
 })
 
 let moon_text1 = gsap.to(".lorem-moon1", {
     scrollTrigger: {
-        trigger: ".third-page",
+        trigger: ".night-page",
         start: "0 0",
         end: "bottom 100",
         pin: true,
-        markers: true,
+        // markers: true,   
         scrub: 1
     },
     "clip-path": "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"
@@ -137,5 +127,14 @@ let moon_text1 = gsap.to(".lorem-moon1", {
 
 
 
-gsap.to(".cloud3", {x: "2100em", duration: 4, repeat: -1})
-gsap.to(".cloud", {x: "2100em", repeat: -1, duration: 5})
+
+gsap.to(".cloud1s", {x: 4000, repeat: -1, duration: 33, delay: 0})
+gsap.to(".cloud2s", {x: 4000, repeat: -1, duration: 18})
+gsap.to(".cloud3s", {x: 4000, repeat: -1, duration: 22, delay: 3})
+
+
+
+
+}
+
+
