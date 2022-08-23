@@ -133,8 +133,6 @@ gsap.to(".cloud2s", {x: 4000, repeat: -1, duration: 18})
 gsap.to(".cloud3s", {x: 4000, repeat: -1, duration: 22, delay: 3})
 
 
-
-
 }
 
 
