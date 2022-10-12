@@ -23,7 +23,7 @@ if(ora < 18 && ora > 5){
 
 
 gsap.from('.hi', {duration: 1, x: '330', ease: "power2.out"}); // hi message appear from right
-gsap.from('.welcome-message', { duration: 1, scale: 0.9, opacity: 0, delay: 1, ease: "power1.out"});  // "welcome" message appear
+
 
 
 

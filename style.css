@@ -122,28 +122,38 @@ a:hover::after{
 
 
 
-.first-page h1{
+.first-page .hi{
+    display: flex;
+    justify-content: center;
     position: relative;
+    width: 100%;
     top: 25vh;
-    left: 50%;
-    transform: translateX(-50%);
-    display: inline-block;
-    overflow: hidden;
-    text-align: center;
+    overflow: hidden;    
     font-size: 3em;
     letter-spacing: 15px;
     font-family: 'Verdana';
 }
+
 
 .hi>span{
     font-size: 12rem;
     background-clip: text;    
     background-size: 225%;
     color: transparent;
+   
 }
 
 .h{
     background-image: url("images/h.jpg");
+   
+}
+
+.h::before{
+    content: "";
+    position: absolute;
+    bottom: 0vw;
+    width: 6vw;
+    border-bottom: 5px solid rgb(20, 93, 157);
 }
 
 .e{
@@ -162,27 +172,9 @@ a:hover::after{
     background-image: url("images/o.jpg");
 }
 
-.hi::before{
-    content: "";
-    height: 5px;
-    width: 43%;
-    display: inline-block;
-    position: absolute;
-    top: 15vh;
-    background-color: red;
-    border-radius: 2em;    
-    transition: .5s;
-}
 
 
 
-.first-page p{
-    position: relative;
-    text-align: center;
-    top: 40vh;
-    font-size: 1.5em;
-    letter-spacing: 6px;
-}
 
 
 
